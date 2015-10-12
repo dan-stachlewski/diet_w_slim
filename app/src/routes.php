@@ -6,13 +6,21 @@ $app->get('/', function ($request, $response, $args) {
 });
 
 $app->get('/test', function ($request, $response, $args) {
-    $toc = $this->toc;
-    d($toc);
-    echo "HI!";
+    $docs = $this->toc;
+    //d($docs);
+    $this->view->render($response, 'navbar.twig', ['docs'=>$docs]);
 });
-//this is what u type in the URL - THIS IS THE ROUTE
+/*this is what u type in the URL - THIS IS THE ROUTE
 $app->get('/docs/{slug}', function ($request, $response, $args) {
     echo "You selected {$args['slug']}";
 })->setName('docs');
-//THIS IS THE NAME FOR THE ROUTE ->setName('docs')
+THIS IS THE NAME FOR THE ROUTE ->setName('docs')*/
 
+        
+$app->get('/docs/{slug}', function ($request, $response, $args) {
+   //Retrieve the Object
+    //$docs = $this->toc;
+   //Render the template
+   //
+   echo "You selected {$args['slug']}";
+})->setName('docs');
