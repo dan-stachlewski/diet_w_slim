@@ -1,11 +1,11 @@
 {# NavBar Twig template #}
 <ul>
     <li>
-        <a href="#">Het Slim w Slim</a>
+        <a href="#">Get Slim w Slim</a>
     </li>
-    {% for docs in doc %}
+    {% for doc in docs %}
         <li>
-            <a href="{{ path_for('docs, {slug :doc.slug}) }}">{{ doc.fname }}</a>
+            <a href="{{ path_for('docs', {slug : doc.slug}) }}">{{ doc.fname }}</a>
         </li>
     {% endfor %}
 
