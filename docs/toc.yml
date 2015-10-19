@@ -1,0 +1,12 @@
+toc:
+    -   fname : 'parsedown.md'
+        slug  : 'parse-down-blahblahblah.html'
+    
+    -   fname : 'whoops.md'
+        slug  : 'whoops-that-was-unintended.html'
+
+    -   fname : 'slim.md'
+        slug  : 'all-that-diet.html'
+
+    -   fname : 'router.md'
+        slug  : 'running-very-fast.html'
